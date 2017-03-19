@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="main.css">
+        <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+    </head>
+
+<body>
+  <h2>Form to Calendar</h2>
+<div>
+<form id="form" method="post" action="mail.php">
+  <label for="title">Event Name:</label>
+    <input type="text" name="title" value="Sample Event"/>
+  <label for="date">Date:</label>
+    <input type="date" name="date" value="2017-03-02"/>
+  <label for="startTime">Start Time:</label>
+    <input type="time" name="startTime" value="16:00"/>
+  <label for="endTime">End Time:</label>
+    <input type="time" name="endTime" value="21:00"/>
+  <label for="location">Location:</label>
+    <input type="text" name="location" value="The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500"/>
+  <label for="email">Email:</label>
+    <input type="email" name="email" value="someone@something.com"/>
+  <label for="details">Description:</label>
+    <textarea name="details" form="form" value="Description goes here"></textarea><br>
+
+  <!-- Hidden text fields below -->
+
+  <input type="hidden" name="googleCalendarLink" style="display: none" />
+  <input type="hidden" name="icsFileText" style="display: none" />
+
+  <!-- End Hidden text fields -->
+
+
+  <input type="submit" id="submit-button" value="Submit Appointment">
+  </form>
+</div>
+
+<br>
+
+  <a id="googleCalLink" href="#" >
+<div id="google" class="hidden">
+  <img width="20px" height ="20px" src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" /><u>Create Event in Gooogle Calendar</u></div></a>
+
+<a id="downloadEventLink" download="myEvent.ics" href="#">
+  <div id="ics" class="hidden">
+  <img width="20px" height="20px" src="https://image.flaticon.com/icons/png/512/0/532.png" /><u>Download Event to Calendar</u></div></a>
+
+  <a id="emailLink" href="#">
+  <div id="email" class="hidden">
+  <img width="20px" height="20px" src="https://d30y9cdsu7xlg0.cloudfront.net/png/1674-200.png" /><u>Email Event File</u></div></a>
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+  <script src="plugins.js"></script>
+  <script src="scheduling.js"></script>
+
+
+</body>
+</html>
