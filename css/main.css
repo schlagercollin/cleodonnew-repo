@@ -19,6 +19,11 @@ button{
 .main-nav-bar{
   background-color: #484a5b;
   padding-bottom: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
 }
 
 #logo img{
@@ -59,7 +64,8 @@ button{
 
 .cloud-content-div{
   background-image: url("http://cleodon.com/wp-content/uploads/2016/10/New-Cloud-Blue-Home-01-01.jpg");
-  padding-top: 70px;
+  background-size: cover;
+  padding-top: 140px;
   padding-bottom: 100px;
 }
 
@@ -72,6 +78,14 @@ button{
 .content-light h1,p{
   text-align: center;
   font-family: "Raleway";
+  color: white;
+}
+
+.content-light h3{
+  font-family: "Raleway";
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 200;
   color: white;
 }
 
@@ -93,7 +107,7 @@ button{
 
 .cloud-employment h1{
   font-size: 5.5vw;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .cloud-employment p{
@@ -114,6 +128,7 @@ button{
 
 .grey-content-div{
   background-color: #CCCCCC;
+  background-size: cover;
   padding-bottom: 100px;
 }
 
@@ -122,12 +137,14 @@ button{
 }
 
 .grey-content-div h1{
-  font: 3.9vw "Raleway-Light";
+  font: 3.8vw "Raleway-Light";
   text-transform: uppercase;
 }
 
 .grey-content-div p{
   text-align: justify;
+  font-family: "Roboto";
+  font-size: 15px;
 }
 
 .small-business-consulting h2{
@@ -135,6 +152,86 @@ button{
 }
 
 
+.blue-content-div{
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-color: #0572CC;
+}
+
+.blue-content-div{
+  font: "Raleway-Light";
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-repeat: no-repeat;
+  font-weight: 100;
+  color: white;
+}
+
+.blue-content-div p{
+  text-align: justify;
+  font: "Roboto";
+  font-size: 13px;
+}
+
+.blue-content-div h1{
+  font: "Raleway-Light";
+  text-align: center;
+  font-weight: 100;
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: white;
+}
+
+.content-right{
+  background-color: rgba(255,255,255,0.8);
+  height: 500px;
+  font-weight: 100;
+  padding: 20px 110px 20px 100px;
+}
+
+.content-right h3{
+  font-family: "Raleway";
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.cloud-employment-form input{
+  display: block;
+  font-family: "Raleway-Light";
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  width: 70%;
+}
+
+.cloud-employment-form{
+  margin-top: 40px;
+}
+
+.cloud-employment-form input[type="submit"]{
+  width: 100px;
+  display: block;
+  text-transform: uppercase;
+  margin: auto;
+  font-family: "Raleway-Light";
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  border: 1px solid #fff;
+}
+
+.cloud-employment-form input[type="submit"]:hover{
+  background-color: #B3B3B3;
+}
+
+.cloud-employment-form input[name="message"]{
+  height: 100px;
+}
 
 .slant {
     position: relative;
