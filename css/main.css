@@ -344,4 +344,13 @@ button:hover{
   .content-right{
     padding: 20px 30px 20px 50px;
   }
+  .cloud-employment h1{
+    font-size: 7.5vw;
+  }
+  .grey-content-div h1{
+    font-size: 6.5vw;
+  }
+  .blue-content-div h1{
+    font-size: 8vw;
+  }
 }
