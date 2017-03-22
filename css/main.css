@@ -17,7 +17,11 @@ button{
   border: 1px solid #fff;
 }
 
-
+button:hover{
+  background-color: #fff;
+  color: black;
+  border-color: white;
+}
 
 .main-nav-bar{
   background-color: #484a5b;
@@ -31,7 +35,8 @@ button{
 
 #logo img{
   width: 100%;
-  max-width: 300px;
+  object-fit: contain;
+  max-width: 32vw;
 }
 
 .flex-container{
@@ -115,18 +120,6 @@ button{
 
 .cloud-employment p{
   text-align: justify;
-}
-
-.cloud-employment button{
-  display: block;
-  width: 20vw;
-  text-transform: uppercase;
-  margin: auto;
-  font-family: "Raleway-Light";
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 8px;
-  border: 1px solid #fff;
 }
 
 .grey-content-div{
@@ -316,4 +309,22 @@ button{
 .slant-bottom::after {
     bottom: 0;
     transform: skewY(3.5deg);
+}
+
+
+/* --Media-- */
+
+@media (max-width: 527px){
+  .content-center{
+    max-width: 95%;
+  }
+  button{
+    width: 100%;
+  }
+  img{
+    width: 50%;
+  }
+  .content-right{
+    padding: 20px 30px 20px 30px;
+  }
 }
