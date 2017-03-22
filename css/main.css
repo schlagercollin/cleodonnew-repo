@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 
+
 h1, h2{
   margin-top: 0px;
 }
@@ -41,9 +42,13 @@ button:hover{
 
 .flex-container{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-around;
   list-style: none;
+}
+
+.flex-item{
+  width: 50%;
 }
 
 .nav-item{
@@ -147,6 +152,10 @@ button:hover{
   text-align: right;
 }
 
+.small-business-consulting img{
+  width: 27%;
+}
+
 
 .blue-content-div{
   padding-top: 100px;
@@ -181,9 +190,8 @@ button:hover{
 
 .content-right{
   background-color: rgba(255,255,255,0.8);
-  height: 500px;
   font-weight: 100;
-  padding: 20px 110px 20px 100px;
+  padding: 20px 45px 50px 50px;
 }
 
 .content-right h3{
@@ -314,9 +322,18 @@ button:hover{
 
 /* --Media-- */
 
+@media (max-width: 650px) {
+  .flex-container{
+    display: block;
+  }
+  .flex-item{
+    width: 100%;
+  }
+}
+
 @media (max-width: 527px){
   .content-center{
-    max-width: 95%;
+    max-width: 85%;
   }
   button{
     width: 100%;
@@ -325,6 +342,6 @@ button:hover{
     width: 50%;
   }
   .content-right{
-    padding: 20px 30px 20px 30px;
+    padding: 20px 30px 20px 50px;
   }
 }
