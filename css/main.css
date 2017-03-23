@@ -18,6 +18,10 @@ button{
   border: 1px solid #fff;
 }
 
+button.navbar-toggle{
+  width: auto;
+}
+
 button:hover{
   background-color: #fff;
   color: black;
@@ -34,11 +38,20 @@ button:hover{
   z-index: 99;
 }
 
-#logo img{
+.navbar-brand img{
   width: 100%;
   object-fit: contain;
-  max-width: 32vw;
 }
+
+.navbar-nav{
+  padding: 20px 0px 0px 0px;
+}
+
+nav.navbar-default{
+  background-image: none;
+  background-color: #484a5b;
+}
+
 
 .flex-container{
   display: flex;
@@ -60,6 +73,16 @@ button:hover{
   font-size: 18px;
   font-family: "Roboto-Thin";
   text-align: center;
+}
+
+.navbar-default .navbar-nav>li>a{
+  font-size: 18px;
+  font-family: "Roboto-Thin";
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  color: orange;
 }
 
 .navigation a{
@@ -145,7 +168,7 @@ button:hover{
 .grey-content-div p{
   text-align: justify;
   font-family: "Roboto";
-  font-size: 15px;
+  font-size: 1.3vw;
 }
 
 .small-business-consulting h2{
@@ -176,7 +199,7 @@ button:hover{
 .blue-content-div p{
   text-align: justify;
   font: "Roboto";
-  font-size: 13px;
+  font-size: 1.3vw;
 }
 
 .blue-content-div h1{
@@ -200,7 +223,8 @@ button:hover{
   text-transform: capitalize;
 }
 
-.cloud-employment-form input{
+.cloud-employment-form input,
+.cloud-employment-form textarea {
   display: block;
   font-family: "Raleway-Light";
   padding: 5px;
@@ -299,6 +323,14 @@ button:hover{
   display: inline;
 }
 
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+  color: orange;
+}
+
+.navbar-default {
+  border: none;
+}
+
 .fa{
   color: #484A5B;
   padding: 10px;
@@ -319,6 +351,11 @@ button:hover{
     transform: skewY(3.5deg);
 }
 
+.navbar-brand{
+  width: 255px;
+  height: auto;
+}
+
 
 /* --Media-- */
 
@@ -328,6 +365,12 @@ button:hover{
   }
   .flex-item{
     width: 100%;
+  }
+}
+
+@media (min-width: 1140px) {
+  .content-right{
+    padding: 20px 45px 150px 50px;
   }
 }
 
@@ -353,4 +396,14 @@ button:hover{
   .blue-content-div h1{
     font-size: 8vw;
   }
+  .cloud-employment p{
+    font-size: 15px;
+  }
+  .grey-content-div p{
+    font-size: 15px;
+  }
+  .blue-content-div p{
+    font-size: 15px;
+  }
+
 }
