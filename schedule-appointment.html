@@ -1,70 +1,389 @@
 <!doctype html>
-<html class="no-js" lang="">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="main.css">
-        <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <sciprt src="js/vendor/bootstrap.min.js"></script>
     </head>
+    <body>
+      <!-- Start Navigation Bar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">
+                  <img src="http://cleodon.com/wp-content/uploads/2016/10/cleodon_logo-FINAL_revised-02.png">
+            </a>
+          </div>
 
-<body>
-  <h2>Form to Calendar</h2>
-<div>
-<form id="form" method="post" action="mail.php">
-  <label for="title">Event Name:</label>
-    <input type="text" name="title" value="Sample Event"/>
-  <label for="date">Date:</label>
-    <input type="date" name="date" value="2017-03-02"/>
-  <label for="startTime">Start Time:</label>
-    <input type="time" name="startTime" value="16:00"/>
-  <label for="endTime">End Time:</label>
-    <input type="time" name="endTime" value="21:00"/>
-  <label for="location">Location:</label>
-    <input type="text" name="location" value="The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500"/>
-  <label for="email">Email:</label>
-    <input type="email" name="email" value="someone@something.com"/>
-  <label for="details">Description:</label>
-    <textarea name="details" form="form" value="Description goes here"></textarea><br>
+           <!--Collect the nav links, forms, and other content for toggling-->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="./cloud-employment.html">Cloud Employment</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./about-us.html">About Us</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="./schedule-appointment.html">Schedule an Appointment</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div> <!--/.navbar-collapse-->
+        </div> <!--/.container-fluid-->
+      </nav>
+      <!-- End Navigation Bar -->
 
-  <!-- Hidden text fields below -->
+      <div class="cloud-content-div slant slant-point" style="padding-top: 150px; padding-bottom: 50px; background-image: none; background-color: #0572CC;">
+        <div class="content-light">
+          <div class="cloud-employment content-center">
+            <h2>Form to Calendar</h2>
+          <div>
+          <form id="form" method="post" action="mail.php">
+            <div class="form-group">
+              <label for="title">Your Name:</label>
+              <input type="text" class="form-control" name="title" placeholder="Your Name"/>
+            </div>
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" class="form-control" name="date" placeholder="Choose a date"/>
+            </div>
+            <label>Pick a Time</label>
+            <div class="radio-tile-group">
+              <div class="input-container">
+                <input id="9:00AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">9:00AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="9:15AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">9:15AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="9:30AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">9:30AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="9:45AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">9:45AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="10:00AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">10:00AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="10:15AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">10:15AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="10:30AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">10:30AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="10:45AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">10:45AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="11:00AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">11:00AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="11:15AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">11:15AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="11:30AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">11:30AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="11:45AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">11:45AM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="12:00AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">12:00PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="12:15AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">12:15PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="12:30AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">12:30PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="12:45AM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">12:45PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="1:00PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">1:00PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="1:15PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">1:15PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="1:30PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">1:30PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="1:45PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">1:45PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="2:00PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">2:00PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="2:15PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">2:15PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="2:30PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">2:30PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="2:45PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">2:45PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="3:00PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">3:00PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="3:15PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">3:15PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="3:30PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">3:30PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="3:45PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">3:45PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="4:00PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">4:00PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="4:15PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">4:15PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="4:30PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">4:30PM</label>
+                </div>
+              </div>
+              <div class="input-container">
+                <input id="4:45PM" class="radio-button" type="radio" name="time" />
+                <div class="radio-tile">
+                  <label for="walk" class="radio-tile-label">4:45PM</label>
+                </div>
+              </div>
 
-  <input type="hidden" name="googleCalendarLink" style="display: none" />
-  <input type="hidden" name="icsFileText" style="display: none" />
+            </div>
+            <!--<div class="form-group">
+              <label for="startTime">Start Time:</label>
+              <input type="time" class="form-control" name="startTime" value="16:00"/>
+            </div>-->
+            <!--<div class="form-group">
+              <label for="endTime">End Time:</label>
+              <input type="time" class="form-control" name="endTime" value="21:00"/>
+            </div>-->
+            <!--<div class="form-group">
+              <label for="location">Location:</label>
+              <input type="text" class="form-control" name="location" placeholder="The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500"/>
+            </div>-->
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" name="email" placeholder="Your email"/>
+            </div>
+            <div class="form-group">
+              <label for="details">Description:</label>
+              <textarea name="details" class="form-control" form="form" placeholder="Provide some details on what you would like to discuss."></textarea>
+            </div>
 
-  <!-- End Hidden text fields -->
+            <!-- Hidden text fields below -->
+
+            <input type="hidden" name="googleCalendarLink" style="display: none" />
+            <input type="hidden" name="icsFileText" style="display: none" />
+
+            <!-- End Hidden text fields -->
+
+            <button type="submit" id="submit-button" class="btn btn-primary" value="Submit Appointment">Submit</button>
+            </form>
+          </div>
+
+          <br>
+
+            <a id="googleCalLink" href="#" >
+          <div id="google" class="hidden">
+            <img width="20px" height ="20px" src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" /><u>Create Event in Gooogle Calendar</u></div></a>
+
+          <a id="downloadEventLink" download="myEvent.ics" href="#">
+            <div id="ics" class="hidden">
+            <img width="20px" height="20px" src="https://image.flaticon.com/icons/png/512/0/532.png" /><u>Download Event to Calendar</u></div></a>
+
+            <a id="emailLink" href="#">
+            <div id="email" class="hidden">
+            <img width="20px" height="20px" src="https://d30y9cdsu7xlg0.cloudfront.net/png/1674-200.png" /><u>Email Event File</u></div></a>
+
+            <script
+              src="https://code.jquery.com/jquery-3.1.1.js"
+              integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+              crossorigin="anonymous"></script>
+            <script src="plugins.js"></script>
+            <script src="scheduling.js"></script>
+           </div>
+        </div>
+      </div>
 
 
-  <input type="submit" id="submit-button" value="Submit Appointment">
-  </form>
-</div>
+    <!-- Start End Content -->
 
-<br>
+    <div class="end-content-div">
+      <div class="content-center">
+        <div class="row">
+          <div class="col-md-4">
+            <img style="width: 250px;" src="http://cleodon.com/wp-content/uploads/2016/10/cleodon_logo-FINAL_revised-02.png">
+            <p style="font: 200 12px Roboto-Thin">Copyright 2016 Cleodon Strategy Group. Website by Mtn. Dog Media.</p>
+          </div>
+          <div class="col-md-4">
+            <nav class="navigation-end">
+              <ul>
+                <li><a class="end-nav-item" href="#">Cloud Employment</a></li>
+                <li><a class="end-nav-item" href="#">Services</a></li>
+                <li><a class="end-nav-item" href="#">About Us</a></li>
+                <li><a class="end-nav-item" href="#">Contact</a></li>
+              </ul>
+          </nav>
+          </div>
+          <div class="col-md-4">
+            <ul class="social-buttons" id="demo2" >
+              <li>
+                <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-facebook fa-stack-1x" style="margin-left: 6px;"></i>
+                </a>
+                </span>
+              </li>
+              <li>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-twitter fa-stack-1x" style="margin-left: 6px;"></i>
+                </span>
+              </li>
+              <li>
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                  <i class="fa fa-linkedin fa-stack-1x" style="margin-left: 6px;"></i>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h5>
+          <i>Disclaimer</i>
+All that we do is submitted and performed with the clear understanding that we are not engaged in rendering legal, accounting, tax or any other professional service. If legal advice or any other expert assistance is required, the service of a professional in that field should be sought.
+<br><br>
+The information, ideas and suggestions contained on this website, or in any of our materials, have been developed from sources including publications and research, that are considered to be reliable, but cannot be guaranteed insofar as they apply to any individual, corporate or other legal entity or taxpayer. Moreover, because of the technical nature of the materials, and the fact that laws and statutes are never static but rather, ever changing, Cleodon Strategy Group, LLC, its employees, officers, directors, subsidiaries, affiliated companies, and agents specifically disclaim any liability for any loss or risk, personal or otherwise, that is incurred as a consequence of the use or application of any information contained on this website or in any other materials, publications, lectures, or communications.
+        </h5>
+      </div>
+    </div>
 
-  <a id="googleCalLink" href="#" >
-<div id="google" class="hidden">
-  <img width="20px" height ="20px" src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" /><u>Create Event in Gooogle Calendar</u></div></a>
-
-<a id="downloadEventLink" download="myEvent.ics" href="#">
-  <div id="ics" class="hidden">
-  <img width="20px" height="20px" src="https://image.flaticon.com/icons/png/512/0/532.png" /><u>Download Event to Calendar</u></div></a>
-
-  <a id="emailLink" href="#">
-  <div id="email" class="hidden">
-  <img width="20px" height="20px" src="https://d30y9cdsu7xlg0.cloudfront.net/png/1674-200.png" /><u>Email Event File</u></div></a>
-
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.js"
-    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-    crossorigin="anonymous"></script>
-  <script src="plugins.js"></script>
-  <script src="scheduling.js"></script>
 
 
-</body>
+
+
+
+
+    </body>
 </html>
