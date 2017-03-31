@@ -156,7 +156,7 @@ $(document).ready(function(){
     var title = $("input[name=title]").val();
     var date = $("input[name=date]").val();
     var startTime = $("input[name=startTime]").val();
-    var endTime = $("input[name=endTime]").val();
+    var endTime = $("input[name=startTime]").val();
     var location = $("input[name=location]").val();
     var details = $("textarea[name=details]").val();
 
@@ -184,7 +184,8 @@ $(document).ready(function(){
     var datesStr = beginStr+"/"+stopStr;
 
     //Link to create event in google calendar
-    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&location="+fevent.location+"&sf=true&output=xml#eventpage_6";
+    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&sf=true&output=xml#eventpage_6";
+    //linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&location="+fevent.location+"&sf=true&output=xml#eventpage_6";
 
 
 
