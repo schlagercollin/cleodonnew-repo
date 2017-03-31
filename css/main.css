@@ -225,7 +225,8 @@ nav.navbar-default{
 }
 
 .cloud-employment-form input,
-.cloud-employment-form textarea {
+.cloud-employment-form textarea,
+.cloud-employment-form select {
   display: block;
   font-family: "Raleway-Light";
   padding: 5px;
@@ -239,12 +240,21 @@ nav.navbar-default{
   color: black;
 }
 
+.cloud-employment-form label{
+  color: white;
+  display: block;
+  font-weight: normal;
+  width: 70%;
+  margin: auto;
+  text-transform: uppercase;
+}
+
 .cloud-employment-form{
   margin-top: 40px;
 }
 
 .cloud-employment-form input[type="submit"]{
-  width: 20%;
+  width: 40%;
   min-width: 100px;
   display: block;
   text-transform: uppercase;

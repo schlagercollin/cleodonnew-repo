@@ -2,18 +2,189 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <sciprt src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="main.css">
+        <!--<link rel="stylesheet" href="main.css">-->
         <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
     </head>
 
 <body>
+
+  <!-- Start Navigation Bar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./index.html">
+              <img src="http://cleodon.com/wp-content/uploads/2016/10/cleodon_logo-FINAL_revised-02.png">
+        </a>
+      </div>
+
+       <!--Collect the nav links, forms, and other content for toggling-->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./cloud-employment.html">Cloud Employment</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./schedule-appointment.html">Create an Appointment</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div> <!--/.navbar-collapse-->
+    </div> <!--/.container-fluid-->
+  </nav>
+  <!-- End Navigation Bar -->
+
+  <div class="cloud-content-div slant slant-point" style="padding-top: 150px; padding-bottom: 50px; background-image: none; background-color: #0572CC;">
+    <div class="content-light">
+      <div class="cloud-employment content-center">
+        <h1>Engage Cleodon</h1>
+        <p style="text-align: center;">
+          Contact Cleodon Strategy Group today to discuss our small business services.
+         </p>
+
+         <div>
+         <form class="cloud-employment-form" id="form" method="post" action="mail.php">
+           <label for="title">Select Service</label>
+           <select>
+             <option>All Services</option>
+             <option>Business Accounting</option>
+             <option>Business Insurance</option>
+             <option>Cloud Employment</option>
+             <option>Digital Marketing</option>
+             <option>Legal Services</option>
+             <option>Medcare Complete</option>
+           </select>
+           <label for="title">Event Name</label>
+             <input type="text" name="title" placeholder="Sample Event"/>
+           <label for="date">Date</label>
+             <input type="date" name="date" placeholder="2017-03-02"/>
+           <label for="startTime">Start Time</label>
+             <input type="time" name="startTime"/>
+           <label for="endTime">End Time</label>
+             <input type="time" name="endTime"/>
+           <label for="location">Location</label>
+             <input type="text" name="location" placeholder="Location"/>
+           <label for="first-name">First Name</label>
+             <input type="first-name" name="first-name" placeholder="Your First Name"/>
+           <label for="last-name">Last Name</label>
+             <input type="last-name" name="last-name" placeholder="Your Last Name"/>
+           <label for="email">Email</label>
+             <input type="email" name="email" placeholder="Your Email"/>
+           <label for="phone">Phone</label>
+             <input type="phone" name="phone" placeholder="(###) ###-####"/>
+           <label for="details">Notes</label>
+             <textarea name="details" form="form" placeholder="Enter notes here"></textarea><br>
+
+           <!-- Hidden text fields below -->
+
+           <input type="hidden" name="googleCalendarLink" style="display: none" />
+           <input type="hidden" name="icsFileText" style="display: none" />
+
+           <!-- End Hidden text fields -->
+
+
+           <input type="submit" id="submit-button" value="Submit Appointment">
+           </form>
+         </div>
+       </div>
+    </div>
+  </div>
+  <!--Start End Content -->
+
+      <div class="end-content-div">
+        <div class="content-center">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="./index.html">
+              <img id="bottom-logo" src="http://cleodon.com/wp-content/uploads/2016/10/cleodon_logo-FINAL_revised-02.png">
+              </a>
+              <p style="font: 200 12px Roboto-Thin">Copyright 2016 Cleodon Strategy Group. Website by Mtn. Dog Media.</p>
+            </div>
+            <div class="col-md-4">
+              <nav class="navigation-end">
+                <ul>
+                  <li><a class="end-nav-item" href="./cloud-employment.html">Cloud Employment</a></li>
+                  <li><a class="end-nav-item" href="./services.html">Services</a></li>
+                  <li><a class="end-nav-item" href="./about-us.html">About Us</a></li>
+                  <li><a class="end-nav-item" href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="col-md-4">
+              <ul class="social-buttons" id="demo2" >
+                <li>
+                  <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fa fa-facebook fa-stack-1x" style="margin-left: 6px;"></i>
+                  </a>
+                  </span>
+                </li>
+                <li>
+                  <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fa fa-twitter fa-stack-1x" style="margin-left: 6px;"></i>
+                  </span>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fa fa-linkedin fa-stack-1x" style="margin-left: 6px;"></i>
+                  </span>
+                </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h5>
+            <i>Disclaimer</i>
+  All that we do is submitted and performed with the clear understanding that we are not engaged in rendering legal, accounting, tax or any other professional service. If legal advice or any other expert assistance is required, the service of a professional in that field should be sought.
+  <br><br>
+  The information, ideas and suggestions contained on this website, or in any of our materials, have been developed from sources including publications and research, that are considered to be reliable, but cannot be guaranteed insofar as they apply to any individual, corporate or other legal entity or taxpayer. Moreover, because of the technical nature of the materials, and the fact that laws and statutes are never static but rather, ever changing, Cleodon Strategy Group, LLC, its employees, officers, directors, subsidiaries, affiliated companies, and agents specifically disclaim any liability for any loss or risk, personal or otherwise, that is incurred as a consequence of the use or application of any information contained on this website or in any other materials, publications, lectures, or communications.
+          </h5>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
   <h2>Form to Calendar</h2>
 <div>
 <form id="form" method="post" action="mail.php">
