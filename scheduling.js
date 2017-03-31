@@ -228,6 +228,7 @@ $(document).ready(function(){
 
     $("input[name=googleCalendarLink]").val(linkText);
     $("input[name=icsFileText]").val(downloadLink);
+    $("input[name=icsFile]").val(downloadLink);
 
     //Show google calendar link and .ics download link after submission of the form
     $("#submit-button").attr("disabled","disabled");

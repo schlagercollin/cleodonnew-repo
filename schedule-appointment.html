@@ -74,14 +74,14 @@
          <div>
          <form class="cloud-employment-form" id="form" method="post" action="mail.php">
            <label for="title">Select Service</label>
-           <select>
-             <option>All Services</option>
-             <option>Business Accounting</option>
-             <option>Business Insurance</option>
-             <option>Cloud Employment</option>
-             <option>Digital Marketing</option>
-             <option>Legal Services</option>
-             <option>Medcare Complete</option>
+           <select name="service">
+             <option value="All-Services">All Services</option>
+             <option value="Business-Accounting">Business Accounting</option>
+             <option value="Business Insurance">Business Insurance</option>
+             <option value="Cloud Employment">Cloud Employment</option>
+             <option value="Digital Marketing">Digital Marketing</option>
+             <option value="Legal Services">Legal Services</option>
+             <option value="Medcare-Complete">Medcare Complete</option>
            </select>
            <label for="title">Event Name</label>
              <input type="text" name="title" placeholder="Sample Event"/>
@@ -108,6 +108,7 @@
 
            <input type="hidden" name="googleCalendarLink" style="display: none" />
            <input type="hidden" name="icsFileText" style="display: none" />
+           <input type="hidden" name"icsFile" style="display:none" />
 
            <!-- End Hidden text fields -->
 
@@ -184,7 +185,7 @@
 
 
 
-
+<!--
   <h2>Form to Calendar</h2>
 <div>
 <form id="form" method="post" action="mail.php">
@@ -203,17 +204,19 @@
   <label for="details">Description:</label>
     <textarea name="details" form="form" value="Description goes here"></textarea><br>
 
-  <!-- Hidden text fields below -->
+  <! Hidden text fields below >
 
   <input type="hidden" name="googleCalendarLink" style="display: none" />
   <input type="hidden" name="icsFileText" style="display: none" />
 
-  <!-- End Hidden text fields -->
+  <! End Hidden text fields >
 
 
   <input type="submit" id="submit-button" value="Submit Appointment">
   </form>
 </div>
+
+-->
 
 <br>
 

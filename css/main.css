@@ -240,6 +240,10 @@ nav.navbar-default{
   color: black;
 }
 
+.cloud-employment-form textarea{
+  height: 100px;
+}
+
 .cloud-employment-form label{
   color: white;
   display: block;
@@ -252,6 +256,27 @@ nav.navbar-default{
 .cloud-employment-form{
   margin-top: 40px;
 }
+
+.mail-info{
+  color: white;
+  font-family: "Roboto";
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.mail-info:hover{
+  color: orange;
+}
+
+.mail-info img{
+  width: 30px;
+  height: 30px;
+}
+
+.mail-info img:hover{
+  opacity: 0.8;
+}
+
 
 .cloud-employment-form input[type="submit"]{
   width: 40%;
