@@ -12,6 +12,7 @@ button{
   text-transform: uppercase;
   margin: auto;
   font-family: "Raleway-Light";
+  font-size: 1.3vw;
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 8px;
@@ -132,7 +133,7 @@ nav.navbar-default{
 }
 
 .content-light p{
-  font-size: 15px;
+  font-size: 1.3vw;
 }
 
 .content-center {
@@ -224,7 +225,8 @@ nav.navbar-default{
 }
 
 .cloud-employment-form input,
-.cloud-employment-form textarea {
+.cloud-employment-form textarea,
+.cloud-employment-form select {
   display: block;
   font-family: "Raleway-Light";
   padding: 5px;
@@ -235,14 +237,50 @@ nav.navbar-default{
   border-radius: 10px;
   border: none;
   width: 70%;
+  color: black;
+}
+
+.cloud-employment-form textarea{
+  height: 100px;
+}
+
+.cloud-employment-form label{
+  color: white;
+  display: block;
+  font-weight: normal;
+  width: 70%;
+  margin: auto;
+  text-transform: uppercase;
 }
 
 .cloud-employment-form{
   margin-top: 40px;
 }
 
+.mail-info{
+  color: white;
+  font-family: "Roboto";
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.mail-info:hover{
+  color: orange;
+}
+
+.mail-info img{
+  width: 30px;
+  height: 30px;
+}
+
+.mail-info img:hover{
+  opacity: 0.8;
+}
+
+
 .cloud-employment-form input[type="submit"]{
-  width: 100px;
+  width: 40%;
+  min-width: 100px;
   display: block;
   text-transform: uppercase;
   margin: auto;
@@ -259,6 +297,10 @@ nav.navbar-default{
 
 .cloud-employment-form input[name="message"]{
   height: 100px;
+}
+
+#bottom-logo{
+  width: 100%;
 }
 
 .slant {
@@ -329,6 +371,36 @@ nav.navbar-default{
 
 .navbar-default {
   border: none;
+}
+
+.icon-page img{
+  height: 4vw;
+  margin-bottom: 20px;
+  min-height: 40px;
+  width: auto;
+}
+
+.icon-page div{
+  text-align: center;
+  font-family: "Roboto-Light";
+}
+
+.icon-page p{
+  text-align: center;
+  font-family: "Roboto-Light";
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
 }
 
 .fa{
@@ -448,6 +520,25 @@ nav.navbar-default{
   .content-right{
     padding: 20px 45px 150px 50px;
   }
+  .cloud-employment-form input{
+    font-size: 1.3vw;
+    height: auto;
+  }
+  .end-content-div h5{
+    font: 100 1vw "Roboto-Light";
+  }
+  .end-nav-item{
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 1024px){
+  #bottom-logo{
+    max-width: 250px;
+  }
+  button{
+    font-size: 10px;s
+  }
 }
 
 @media (max-width: 527px){
@@ -481,5 +572,52 @@ nav.navbar-default{
   .blue-content-div p{
     font-size: 15px;
   }
+  .cloud-employment-form input[type="submit"]{
+    width: 95%;
+    min-width: 0px;
+  }
+  .cloud-employment-form input{
+    width: 95%;
+  }
+  .cloud-employment-form textarea{
+    width: 95%;
+  }
 
+}
+/*Change mobile menu breakpoint to 850px*/
+@media (max-width: 850px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
 }

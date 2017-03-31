@@ -10,6 +10,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <sciprt src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -25,6 +36,8 @@
         <sciprt src="js/vendor/moment.js"></script>
         <sciprt src="js/vendor/moment-timezone-with-data-2010-2020.js"></script>
 
+        <!--<link rel="stylesheet" href="main.css">-->
+        <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
     </head>
     <body>
       <!-- Start Navigation Bar -->
@@ -76,7 +89,7 @@
               <label for="date">Date:</label>
               <input type="date" class="form-control" name="date" placeholder="Choose a date"/>
             </div>
-              <!--
+              
             <label>Pick a Time</label>
             <div class="radio-tile-group">
               <div class="input-container">
@@ -272,11 +285,12 @@
                 </div>
               </div>
 
-            </div>-->
+            </div>
+            <!--
             <div class="form-group">
               <label for="startTime">Start Time:</label>
               <input type="time" class="form-control" name="startTime" value="16:00"/>
-            </div>
+            </div>-->
             <!--<div class="form-group">
               <label for="endTime">End Time:</label>
               <input type="time" class="form-control" name="endTime" value="21:00"/>
@@ -298,6 +312,7 @@
 
             <input type="hidden" name="googleCalendarLink" style="display: none" />
             <input type="hidden" name="icsFileText" style="display: none" />
+            <input type="hidden" name"icsFile" style="display:none" />
 
             <!-- End Hidden text fields -->
 
@@ -311,7 +326,7 @@
           <div id="google" class="hidden">
             <img width="20px" height ="20px" src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" /><u>Create Event in Gooogle Calendar</u></div></a>
 
-          <a id="downloadEventLink" download="myEvent.ics" href="#">
+             <a id="downloadEventLink" download="myEvent.ics" href="#">
             <div id="ics" class="hidden">
             <img width="20px" height="20px" src="https://image.flaticon.com/icons/png/512/0/532.png" /><u>Download Event to Calendar</u></div></a>
 
@@ -329,6 +344,7 @@
         </div>
       </div>
 
+  <! End Hidden text fields >
 
     <!-- Start End Content -->
 
@@ -382,7 +398,6 @@ The information, ideas and suggestions contained on this website, or in any of o
         </h5>
       </div>
     </div>
-
 
 
 
