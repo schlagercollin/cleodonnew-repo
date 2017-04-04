@@ -73,7 +73,7 @@ $download = $_GET['downloadText'];
 
            <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $download ?>">
              <div id="ics" class="">
-               <img src="https://image.flaticon.com/icons/png/512/0/532.png" />Download Event to Calendar
+               <img src="https://image.flaticon.com/icons/png/512/0/532.png" /><span class="download-text">Download Event to Calendar</span>
              </div>
            </a><br>
 

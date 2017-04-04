@@ -136,13 +136,13 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
 
              <a target="_blank" class="mail-info" id="googleCalLink" href="<?php echo $gcalLink ?>" >
               <div id="google" class="">
-                <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" />Create Event in Gooogle Calendar
+                <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" /><span class="download-text">Create Event in Gooogle Calendar</span>
               </div>
             </a><br>
 
            <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $icsFileText ?>">
              <div id="ics" class="">
-               <img src="https://image.flaticon.com/icons/png/512/0/532.png" />Download Event to Calendar
+               <img src="https://image.flaticon.com/icons/png/512/0/532.png" /><span class="download-text">Download Event to Calendar</span>
              </div>
            </a><br>
 

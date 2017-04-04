@@ -583,6 +583,11 @@ nav.navbar-default{
     width: 95%;
   }
 
+  .radio-tile-group .input-container {
+    width: 45%;
+  }
+
+
 }
 /*Change mobile menu breakpoint to 850px*/
 @media (max-width: 850px) {
