@@ -142,9 +142,6 @@ if (typeof define === "function" && define.amd) {
 
 //***Begin Web Code***//
 
-
-
-
 $(document).ready(function(){
   var linkText = "";
   $("#form").submit(function(action){
@@ -155,26 +152,21 @@ $(document).ready(function(){
     //Get values from form fields
     var title = "Cleodon Consulting Appointment"
     var date = $("input[name=date]").val();
-    var startTime = $("input:radio[name=startTime]:checked").val();
-    var endTime = startTime;
-    var location = " ";
+    var startTime = $("input[name=startTime]:checked").val();
     var details = $("textarea[name=details]").val();
 
-    //Compile values into one object for ease of use
-    var event = {title:title, date:date, startTime:startTime, endTime:endTime, location:location, details:details};
-
-    //Create second object for all the formatted UTC values as needed
-    var fevent = {title:title, date:date, startTime:startTime, endTime:endTime, location:location, details:details};
-
-    //Formatting for URL linkText, using fevent instead of event
-    fevent.title = fevent.title.replace(/ /g,"+");
-    fevent.location = fevent.location.replace(/ /g,"+");
-    fevent.details = fevent.details.replace(/ /g,"+");
+    // Collect the date and time information into a moment.js object
+    var momentInput = date + " " + startTime;
+    var beginTime = moment(momentInput, "YYYY-MM-DD HH:mm").utc();
+    var endTime = beginTime.clone().add(15, 'm'); //set the end time to 15 minutes after start
+    //Formatting for URL linkText
+    var title = title.replace(/ /g,"+");
+    var details = details.replace(/ /g,"+");
 
     //More formatting of the date URI
-    var formattedStartDate = fevent.date.replace(/-/g,"");
-    var formattedStartTime = fevent.startTime.replace(/:/g,"");
-    var formattedEndTime = fevent.endTime.replace(/:/g,"");
+    var formattedStartDate = beginTime.format("YYYYMMDD");
+    var formattedStartTime = beginTime.format("HHmm");
+    var formattedEndTime = endTime.format("HHmm");
 
     //These strings are used in linkText and .ics formatting
     var beginStr = formattedStartDate+"T" + formattedStartTime+"00Z";
@@ -184,7 +176,8 @@ $(document).ready(function(){
     var datesStr = beginStr+"/"+stopStr;
 
     //Link to create event in google calendar
-    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&location="+fevent.location+"&sf=true&output=xml#eventpage_6";
+    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+title+"&dates="+datesStr+"&details="+details+"&sf=true&output=xml#eventpage_6";
+
 
 
 
