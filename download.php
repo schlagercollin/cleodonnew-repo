@@ -1,54 +1,5 @@
 <?php
-$gcalLink = $_POST['googleCalendarLink'];
-$icsFileText = $_POST['icsFileText'];
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$date = $_POST['data'];
-$time_slot = $_POST['startTime'];
-$service = $_POST['service'];
-//define the receiver of the email
-$to = $_POST['email'];
-//define the subject of the email
-$subject = $_POST['title'];
-//define the message to be sent. Each line should be separated with \n
-$message = "
-<html>
-<head>
-<title>HTML email</title>
-</head>
-<body>
-<p>Dear $name,</p>
-<p>Thank you for schedling your appointment! We will get back to you soon.<br>
-<table>
-  <tr>
-    <th>Name</th><td>$name</td>
-  </tr>
-  <tr>
-    <th>Date</th><td>$date</td>
-  </tr>
-  <tr>
-    <th>Time</th><td>$time_slot</td>
-  <tr>
-    <th>Notes</th><td>$details</td>
-  </tr>
-</table>
-Click this link to download an iCal file <a href='http://cleodonnew.mtndogdevelopment.com/download.php?downloadText=$icsFileText'>iCal File</a><br>
-Click this link to add this appointment to your Google Calendar. <br>
-<a href='$gcalLink'>Google Calendar Link</a></p>
-</body>
-</html>
-";
-//$message = "Thank you for schedling your appointment!\nWe will get back to you soon.\nClick this link to download an iCal file <a href='$icsFileText'>Download</a> \nClick this link to add this appointment to you Google Calendar. $gcalLink";
-//define the headers we want passed. Note that they are separated with \r\n
-
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: khaled@mtndogmedia.com\r\nReply-To: khaled@mtndogmedia.com\r\n";
-
-//send the email
-$mail_sent = @mail( $to, $subject, $message, $headers );
-//if the message is sent successfully print "Mail sent". Otherwise print "Mail failed"
-echo $mail_sent ? "Mail sent" : "Mail failed";
+$download = $_GET['downloadText'];
 ?>
 
 <!doctype html>
@@ -115,32 +66,12 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
       <div class="cloud-content-div slant slant-point" style="padding-top: 150px; padding-bottom: 50px; background-image: none; background-color: #0572CC;">
         <div class="content-light">
           <div class="cloud-employment content-center">
-            <h1>Appointment Request Sent</h1>
+            <h1>Download</h1>
             <p style="text-align: center;">
-              Thank you for requesting an appointment. We will get back to you shortly.
+              Click the link below to download your appointment to your calendar.
              </p>
-             <h3>Your Appointment Details:</h3>
-             <table>
-               <tr>
-                 <th>Name</th><td><?php $name ?></td>
-               </tr>
-               <tr>
-                 <th>Date</th><td><?php $date ?></td>
-               </tr>
-               <tr>
-                 <th>Time</th><td><?php $time_slot ?></td>
-               <tr>
-                 <th>Notes</th><td><?php $details ?></td>
-               </tr>
-             </table>
 
-             <a target="_blank" class="mail-info" id="googleCalLink" href="<?php echo $gcalLink ?>" >
-              <div id="google" class="">
-                <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" />Create Event in Gooogle Calendar
-              </div>
-            </a><br>
-
-           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $icsFileText ?>">
+           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $download ?>">
              <div id="ics" class="">
                <img src="https://image.flaticon.com/icons/png/512/0/532.png" />Download Event to Calendar
              </div>
