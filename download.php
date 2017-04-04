@@ -71,7 +71,7 @@ $download = $_GET['downloadText'];
               Click the link below to download your appointment to your calendar.
              </p>
 
-           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $download ?>">
+           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo urlencode($download) ?>">
              <div id="ics" class="">
                <img src="https://image.flaticon.com/icons/png/512/0/532.png" />Download Event to Calendar
              </div>
