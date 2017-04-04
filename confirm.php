@@ -119,6 +119,21 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
             <p style="text-align: center;">
               Thank you for requesting an appointment. We will get back to you shortly.
              </p>
+             <h3>Your Appointment Details:</h3>
+             <table>
+               <tr>
+                 <th>Name</th><td><?php $name ?></td>
+               </tr>
+               <tr>
+                 <th>Date</th><td><?php $date ?></td>
+               </tr>
+               <tr>
+                 <th>Time</th><td><?php $time_slot ?></td>
+               <tr>
+                 <th>Notes</th><td><?php $details ?></td>
+               </tr>
+             </table>
+
              <a target="_blank" class="mail-info" id="googleCalLink" href="<?php echo $gcalLink ?>" >
               <div id="google" class="">
                 <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" />Create Event in Gooogle Calendar
