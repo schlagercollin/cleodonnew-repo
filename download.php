@@ -1,5 +1,7 @@
 <?php
-$download = $_GET['downloadText'];
+$downloadfull = $_GET['downloadText'];
+$unformatted = substr($downloadfull, 0, 32);
+$formatted = substr($downloadfull, 32);
 ?>
 
 <!doctype html>
@@ -71,7 +73,7 @@ $download = $_GET['downloadText'];
               Click the link below to download your appointment to your calendar.
              </p>
 
-           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo urlencode($download) ?>">
+           <a class="mail-info" id="downloadEventLink" download="myEvent.ics" href="<?php echo $unformatted ?><?php echo urlencode($formatted) ?>">
              <div id="ics" class="">
                <img src="https://image.flaticon.com/icons/png/512/0/532.png" />Download Event to Calendar
              </div>
