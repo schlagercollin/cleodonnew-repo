@@ -77,18 +77,18 @@
           <div>
           <form id="form" method="post" action="mail.php">
             <div class="form-group">
-              <label for="title">Your Name:</label>
-              <input type="text" class="form-control" name="title" placeholder="Your Name"/>
+              <label for="name">Your Name:</label>
+              <input type="text" class="form-control" name="name" placeholder="Your Name" required/>
             </div>
             <div class="form-group">
               <label for="date">Date:</label>
-              <input type="date" class="form-control" name="date" placeholder="Choose a date"/>
+              <input type="date" class="form-control" name="date" placeholder="Choose a date" required/>
             </div>
 
             <label>Pick a Time</label>
             <div class="radio-tile-group">
               <div class="input-container">
-                <input value="09:00" class="radio-button" type="radio" name="startTime" />
+                <input value="09:00" class="radio-button" type="radio" name="startTime" required/>
                 <div class="radio-tile">
                   <label for="walk" class="radio-tile-label">9:00AM</label>
                 </div>
@@ -256,25 +256,25 @@
                 </div>
               </div>
               <div class="input-container">
-                <input value="16:00" class="radio-button" type="radio" name="time" />
+                <input value="16:00" class="radio-button" type="radio" name="startTime" />
                 <div class="radio-tile">
                   <label for="walk" class="radio-tile-label">4:00PM</label>
                 </div>
               </div>
               <div class="input-container">
-                <input value="16:15" class="radio-button" type="radio" name="time" />
+                <input value="16:15" class="radio-button" type="radio" name="startTime" />
                 <div class="radio-tile">
                   <label for="walk" class="radio-tile-label">4:15PM</label>
                 </div>
               </div>
               <div class="input-container">
-                <input value="16:30" class="radio-button" type="radio" name="time" />
+                <input value="16:30" class="radio-button" type="radio" name="startTime" />
                 <div class="radio-tile">
                   <label for="walk" class="radio-tile-label">4:30PM</label>
                 </div>
               </div>
               <div class="input-container">
-                <input value="16:45" class="radio-button" type="radio" name="time" />
+                <input value="16:45" class="radio-button" type="radio" name="startTime" />
                 <div class="radio-tile">
                   <label for="walk" class="radio-tile-label">4:45PM</label>
                 </div>
@@ -296,18 +296,17 @@
             </div>-->
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="email" class="form-control" name="email" placeholder="Your email"/>
+              <input type="email" class="form-control" name="email" placeholder="Your email" required/>
             </div>
             <div class="form-group">
               <label for="details">Description:</label>
-              <textarea name="details" class="form-control" form="form" placeholder="Provide some details on what you would like to discuss."></textarea>
+              <textarea name="details" class="form-control" form="form" placeholder="Provide some details on what you would like to discuss." required></textarea>
             </div>
 
             <!-- Hidden text fields below -->
 
-            <input type="hidden" name="googleCalendarLink" style="display: none" />
-            <input type="hidden" name="icsFileText" style="display: none" />
-            <input type="hidden" name"icsFile" style="display:none" />
+            <input id="gCalLinkInput" type="hidden" name="googleCalendarLink"/>
+            <input id ="icsFileTextInput" type="hidden" name="icsFileText"/>
 
             <!-- End Hidden text fields -->
 
@@ -332,8 +331,6 @@
            </div>
         </div>
       </div>
-
-  <! End Hidden text fields >
 
     <!-- Start End Content -->
 

@@ -1,10 +1,10 @@
 <?php
 $gcalLink = $_POST['googleCalendarLink'];
 $icsFileText = $_POST['icsFileText'];
-$firstName = $_POST['first-name'];
-$lastName = $_POST['last-name'];
+$name = $_POST['name'];
 $phone = $_POST['phone'];
 $date = $_POST['data'];
+$time_slot = $_POST['startTime'];
 $service = $_POST['service'];
 //define the receiver of the email
 $to = $_POST['email'];
@@ -17,18 +17,17 @@ $message = "
 <title>HTML email</title>
 </head>
 <body>
-<p>Dear $firstName $lastName,</p>
+<p>Dear $name,</p>
 <p>Thank you for schedling your appointment! We will get back to you soon.<br>
 <table>
   <tr>
-    <th>Name</th><td>$lastName, $firstName</td>
-  </tr>
-  <tr>
-    <th>Service</th><td>$service</td>
+    <th>Name</th><td>$name</td>
   </tr>
   <tr>
     <th>Date</th><td>$date</td>
   </tr>
+  <tr>
+    <th>Time</th><td>$time_slot</td>
   <tr>
     <th>Notes</th><td>$details</td>
   </tr>
@@ -120,7 +119,7 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
             <p style="text-align: center;">
               Thank you for requesting an appointment. We will get back to you shortly.
              </p>
-             <a class="mail-info" id="googleCalLink" href="<?php echo $gcalLink ?>" >
+             <a target="_blank" class="mail-info" id="googleCalLink" href="<?php echo $gcalLink ?>" >
               <div id="google" class="">
                 <img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/calendar-icon.png" />Create Event in Gooogle Calendar
               </div>
