@@ -155,8 +155,7 @@ $(document).ready(function(){
     //Get values from form fields
     var title = $("input[name=title]").val();
     var date = $("input[name=date]").val();
-    var startTime = $("input[name=startTime]").val();
-    var endTime = $("input[name=startTime]").val();
+    var startTime = $(".startTime:checked").val()
     var location = $("input[name=location]").val();
     var details = $("textarea[name=details]").val();
 

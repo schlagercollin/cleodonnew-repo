@@ -1,8 +1,7 @@
 <?php
 $gcalLink = $_POST['googleCalendarLink'];
 $icsFileText = $_POST['icsFileText'];
-$firstName = $_POST['first-name'];
-$lastName = $_POST['last-name'];
+$name = $_POST['name'];
 $phone = $_POST['phone'];
 $date = $_POST['data'];
 $time_slot = $_POST['startTime'];
@@ -18,7 +17,7 @@ $message = "
 <title>HTML email</title>
 </head>
 <body>
-<p>Dear $firstName $lastName,</p>
+<p>Dear $name,</p>
 <p>Thank you for schedling your appointment! We will get back to you soon.<br>
 <table>
   <tr>
