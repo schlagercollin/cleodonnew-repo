@@ -5,6 +5,7 @@ $firstName = $_POST['first-name'];
 $lastName = $_POST['last-name'];
 $phone = $_POST['phone'];
 $date = $_POST['data'];
+$time_slot = $_POST['startTime'];
 $service = $_POST['service'];
 //define the receiver of the email
 $to = $_POST['email'];
@@ -29,6 +30,8 @@ $message = "
   <tr>
     <th>Date</th><td>$date</td>
   </tr>
+  <tr>
+    <th>Time</th><td>$time_slot</td>
   <tr>
     <th>Notes</th><td>$details</td>
   </tr>
