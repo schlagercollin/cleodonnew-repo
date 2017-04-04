@@ -3,7 +3,8 @@ $gcalLink = $_POST['googleCalendarLink'];
 $icsFileText = $_POST['icsFileText'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$date = $_POST['data'];
+$date = $_POST['date'];
+$details = $_POST['details'];
 $time_slot = $_POST['startTime'];
 $service = $_POST['service'];
 //define the receiver of the email
