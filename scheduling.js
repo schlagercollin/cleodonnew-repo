@@ -170,7 +170,7 @@ $(document).ready(function(){
     var formattedEndTime = endTime.format("HHmm");
 
     //Creating an event object for easier organization
-    var event = {title=title, date=formattedStartDate, startTime=formattedStartTime, endTime=formattedEndTime, location=location, details=details};
+    var event = {title: title, date: formattedStartDate, startTime: formattedStartTime, endTime: formattedEndTime, location: location, details: details};
 
     //These strings are used in linkText and .ics formatting
     var beginStr = event.date+"T" + event.startTime+"00Z";
