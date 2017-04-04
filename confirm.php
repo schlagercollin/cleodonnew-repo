@@ -74,7 +74,7 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
         <script src="js/main.js"></script>
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.js"></script>
-        <sciprt src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
     </head>
     <body>
       <!-- Start Navigation Bar -->
