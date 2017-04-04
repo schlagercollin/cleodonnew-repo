@@ -119,8 +119,8 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
             <p style="text-align: center;">
               Thank you for requesting an appointment. We will get back to you shortly.
              </p>
-             <h3>Your Appointment Details:</h3>
-             <table>
+             <h3 style="text-align: center;">Your Appointment Details:</h3>
+             <table style="margin: auto; margin-bottom: 50px;">
                <tr>
                  <th>Name: </th><td><?php echo($name) ?></td>
                </tr>
