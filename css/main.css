@@ -6,6 +6,11 @@ h1, h2{
   margin-top: 0px;
 }
 
+table {
+    color: #ffffff;
+    font-family: Raleway;
+}
+
 button{
   display: block;
   width: 20vw;
@@ -484,6 +489,10 @@ nav.navbar-default{
 }
 .radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
   color: #000000;
+}
+
+span.download-text {
+    font-size: 16px;
 }
 
 

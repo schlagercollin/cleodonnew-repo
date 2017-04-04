@@ -54,7 +54,7 @@ $formatted = substr($downloadfull, 32);
               <li><a href="./about-us.html">About Us</a></li>
               <li><a href="./contact.html">Contact</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="./schedule-appointment.html">Create an Appointment</a></li>
                 </ul>

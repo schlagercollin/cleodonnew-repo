@@ -101,7 +101,7 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
               <li><a href="./about-us.html">About Us</a></li>
               <li><a href="./contact.html">Contact</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get in Touch<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="./schedule-appointment.html">Create an Appointment</a></li>
                 </ul>
@@ -122,15 +122,15 @@ echo $mail_sent ? "Mail sent" : "Mail failed";
              <h3>Your Appointment Details:</h3>
              <table>
                <tr>
-                 <th>Name</th><td><?php $name ?></td>
+                 <th>Name: </th><td><?php echo($name) ?></td>
                </tr>
                <tr>
-                 <th>Date</th><td><?php $date ?></td>
+                 <th>Date: </th><td><?php echo($date) ?></td>
                </tr>
                <tr>
-                 <th>Time</th><td><?php $time_slot ?></td>
+                 <th>Time: </th><td><?php echo($time_slot) ?></td>
                <tr>
-                 <th>Notes</th><td><?php $details ?></td>
+                 <th>Notes: </th><td><?php echo($details) ?></td>
                </tr>
              </table>
 
