@@ -153,10 +153,11 @@ $(document).ready(function(){
     //action.preventDefault();
 
     //Get values from form fields
-    var title = $("input[name=title]").val();
+    var title = "Cleodon Consulting Appointment"
     var date = $("input[name=date]").val();
-    var startTime = $(".startTime:checked").val()
-    var location = $("input[name=location]").val();
+    var startTime = $("input:radio[name=startTime]:checked").val();
+    var endTime = startTime;
+    var location = " ";
     var details = $("textarea[name=details]").val();
 
     //Compile values into one object for ease of use
@@ -183,8 +184,7 @@ $(document).ready(function(){
     var datesStr = beginStr+"/"+stopStr;
 
     //Link to create event in google calendar
-    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&sf=true&output=xml#eventpage_6";
-    //linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&location="+fevent.location+"&sf=true&output=xml#eventpage_6";
+    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+fevent.title+"&dates="+datesStr+"&details="+fevent.details+"&location="+fevent.location+"&sf=true&output=xml#eventpage_6";
 
 
 
@@ -219,16 +219,18 @@ $(document).ready(function(){
 
         var emailtext = "mailto:someone@yoursite.com?&subject=My%20Event&body="+linkText;
 
-    console.log(emailtext);
-
     //Set up google calendar link with correct link = linkText
     $("#googleCalLink").attr("href",linkText);
-    $("#emailLink").attr("href",emailtext)
+    $("#emailLink").attr("href",emailtext);
     $("#googleCalLink").attr("target","_blank");
 
-    $("input[name=googleCalendarLink]").val(linkText);
-    $("input[name=icsFileText]").val(downloadLink);
-    $("input[name=icsFile]").val(downloadLink);
+    //$("input[name=googleCalendarLink]").val(linkText);
+    //$("input[name=googleCalendarLink]").attr("value",linkText);
+    //$("input[name=icsFileText]").val(downloadLink);
+    $("#gCalLinkInput").val(linkText);
+    $("#icsFileTextInput").val(downloadLink);
+
+    //console.log("Link Text = "+linkText);
 
     //Show google calendar link and .ics download link after submission of the form
     $("#submit-button").attr("disabled","disabled");
