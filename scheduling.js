@@ -154,6 +154,7 @@ $(document).ready(function(){
     var date = $("input[name=date]").val();
     var startTime = $("input[name=startTime]:checked").val();
     var details = $("textarea[name=details]").val();
+    var location = "";
 
     // Collect the date and time information into a moment.js object
     var momentInput = date + " " + startTime;
@@ -168,15 +169,18 @@ $(document).ready(function(){
     var formattedStartTime = beginTime.format("HHmm");
     var formattedEndTime = endTime.format("HHmm");
 
+    //Creating an event object for easier organization
+    var event = {title=title, date=formattedStartDate, startTime=formattedStartTime, endTime=formattedEndTime, location=location, details=details};
+
     //These strings are used in linkText and .ics formatting
-    var beginStr = formattedStartDate+"T" + formattedStartTime+"00Z";
-    var stopStr = formattedStartDate+"T" + formattedEndTime+"00Z"
+    var beginStr = event.date+"T" + event.startTime+"00Z";
+    var stopStr = event.date+"T" + event.endTime+"00Z"
 
     //For linkText
     var datesStr = beginStr+"/"+stopStr;
 
     //Link to create event in google calendar
-    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+title+"&dates="+datesStr+"&details="+details+"&sf=true&output=xml#eventpage_6";
+    linkText = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+event.title+"&dates="+datesStr+"&location="+event.location+"&details="+event.details+"&sf=true&output=xml#eventpage_6";
 
 
 
