@@ -1,5 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');*/
+
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: "Raleway-Light";
+    src: url('../fonts/Raleway-Light.ttf');
+}
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url('../fonts/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url('../fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url('../fonts/Roboto-Thin.ttf');
+    font-weight: bold;
+}
 
 
 h1, h2{
@@ -489,6 +516,14 @@ nav.navbar-default{
 }
 .radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
   color: #000000;
+}
+
+.form-group label{
+  color: white;
+}
+
+label{
+  color: white;
 }
 
 span.download-text {
